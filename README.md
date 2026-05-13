@@ -47,6 +47,8 @@ Datos crudos (.sav)
 
 ## Estructura de Directorios
 
+Parte de la estructura es generada post-ejecucion.
+
 ```
 lab02_dl/
 ├── data/
@@ -292,14 +294,14 @@ El archivo `15 atributos R0-R5.sav` contiene variables de orientación cognitiva
 
 | Columna | Tipo | Descripción |
 |---|---|---|
-| `Día` | Numérica | Día del mes (orientación temporal) |
-| `Mes` | Numérica | Mes del año (orientación temporal) |
-| `Año` | Numérica | Año (orientación temporal) |
-| `Estación` | Numérica | Estación del año (orientación temporal) |
-| `País` | Numérica | País de residencia (orientación espacial) |
-| `Ciudad` | Numérica | Ciudad de residencia (orientación espacial) |
-| `CalleLugar` | Numérica | Calle o lugar (orientación espacial) |
-| `NumeroPiso` | Numérica | Número o piso (orientación espacial) |
+| `Día` | Binaria | Día del mes (orientación temporal) |
+| `Mes` | Binaria | Mes del año (orientación temporal) |
+| `Año` | Binaria | Año (orientación temporal) |
+| `Estación` | Binaria | Estación del año (orientación temporal) |
+| `País` | Binaria | País de residencia (orientación espacial) |
+| `Ciudad` | Binaria | Ciudad de residencia (orientación espacial) |
+| `CalleLugar` | Binaria | Calle o lugar (orientación espacial) |
+| `NumeroPiso` | Binaria | Número o piso (orientación espacial) |
 | `Miguel2` | Binaria | Ítem de orientación personal |
 | `González2` | Binaria | Ítem de orientación personal |
 | `Avenida2` | Binaria | Ítem de orientación personal |
