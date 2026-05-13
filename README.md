@@ -38,9 +38,11 @@ Datos crudos (.sav)
   └── 50 forward passes estocásticos → media y desviación estándar
        │
        ▼
-  Artefactos de salida:
-  ├── models/best_model_<TARGET>.pth
-  └── results/metrics_summary.json
+   Artefactos de salida:
+   ├── data/processed/features_<TARGET>.csv
+   ├── data/processed/target_<TARGET>.csv
+   ├── models/best_model_<TARGET>.pth
+   └── results/metrics_summary.json
 ```
 
 ---
@@ -54,8 +56,19 @@ lab02_dl/
 ├── data/
 │   ├── raw/                        # Dataset original en formato .sav (SPSS)
 │   │   └── 15 atributos R0-R5.sav
-│   ├── processed/                  # Datos preprocesados (generados por el pipeline)
-│   └── outputs/                    # Salidas auxiliares de datos
+│   └── processed/                  # Datasets preprocesados generados por el pipeline
+│       ├── features_GDS.csv
+│       ├── target_GDS.csv
+│       ├── features_GDS_R1.csv
+│       ├── target_GDS_R1.csv
+│       ├── features_GDS_R2.csv
+│       ├── target_GDS_R2.csv
+│       ├── features_GDS_R3.csv
+│       ├── target_GDS_R3.csv
+│       ├── features_GDS_R4.csv
+│       ├── target_GDS_R4.csv
+│       ├── features_GDS_R5.csv
+│       └── target_GDS_R5.csv
 │
 ├── models/                         # Pesos de los modelos entrenados (.pth)
 │   ├── best_model_GDS.pth
@@ -213,6 +226,8 @@ python -m src.main
 
 **Salidas generadas:**
 
+- `data/processed/features_<TARGET>.csv` — Features escaladas e imputadas para cada variable objetivo.
+- `data/processed/target_<TARGET>.csv` — Target codificado en representación multilabel (One-Hot) por variable objetivo.
 - `models/best_model_<TARGET>.pth` — Pesos del modelo final por cada variable objetivo.
 - `results/metrics_summary.json` — Reporte consolidado de métricas de validación cruzada.
 
@@ -268,6 +283,8 @@ data/raw/15 atributos R0-R5.sav
         │
         ▼
    Persistencia:
+   ├── data/processed/features_<TARGET>.csv
+   ├── data/processed/target_<TARGET>.csv
    ├── models/best_model_<TARGET>.pth
    └── results/metrics_summary.json
 ```

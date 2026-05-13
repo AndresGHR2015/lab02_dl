@@ -58,6 +58,12 @@ def main() -> None:
         x_numpy = features_df.values
         y_numpy = target_df.values
         
+        processed_dir = os.path.join("data", "processed")
+        os.makedirs(processed_dir, exist_ok=True)
+        features_df.to_csv(os.path.join(processed_dir, f"features_{target_column}.csv"), index=False)
+        target_df.to_csv(os.path.join(processed_dir, f"target_{target_column}.csv"), index=False)
+        print(f"Processed dataset for {target_column} saved to: {processed_dir}")
+        
         print(f"Data preprocessed for {target_column}. Features shape: {x_numpy.shape}, Target shape: {y_numpy.shape}")
         
         hyperparameter_grid = [
